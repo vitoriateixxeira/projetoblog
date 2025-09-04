@@ -1,0 +1,1037 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-marrom: #461e04;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgb(254, 254, 241);
+    height: 100%;
+    min-height: 100vh;
+    /* Garante altura mínima igual à altura da janela */
+    padding-bottom: 60px;
+}
+
+#containercabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    border-bottom: 1px solid #461e04;
+    width: 100%;
+    z-index: 10;
+    background: rgb(254, 254, 241);
+
+}
+
+#logo {
+    width: 6%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.barra-pesquisa {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.barra-pesquisa input {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    /* Espaço à esquerda para o ícone */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: clamp(1rem, 2.5vw, 16px);
+
+}
+
+.barra-pesquisa button {
+    position: absolute;
+    right: 10px;
+    /* Posiciona a lupa à direita */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.barra-pesquisa button img {
+    width: 24px;
+    height: 24px;
+}
+
+.barra-pesquisa button:hover {
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+#navegacaocontainer {
+
+    display: flex;
+    max-width: 800px;
+    min-width: 200px
+}
+
+
+.navegacacaocabecalho {
+    display: flex;
+    float: left;
+    list-style-type: none;
+    padding: 0%;
+
+
+}
+
+.navegacacaocabecalho a {
+    text-decoration: none;
+    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+
+    font-weight: bold;
+    color: #864313;
+    justify-content: center;
+    text-align: center;
+    padding: 8px 8px;
+
+}
+
+.navegacacaocabecalho a:hover {
+
+    color: rgb(254, 254, 241);
+    border-radius: 8px;
+
+    background: #0d450d;
+
+}
+
+.navegacacaocabecalho a:active {}
+
+#conteudo {
+    width: 80%;
+    float: right;
+
+}
+
+#conteudocontainer {
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 100px;
+    flex: 1;
+}
+
+#conteudo-principal {
+    float: left;
+    width: 50%;
+
+    border-color: #532606;
+    border-left: 1px solid;
+
+    padding-left: 24px;
+    padding-right: 24px;
+    position: absolute;
+    left: 15%;
+}
+
+#conteudo-principal img {
+    width: 60%;
+    padding: 8px 0px;
+
+}
+
+#conteudo-principal h2 {
+    font-size: clamp(1.2rem, 2.5vw, 3.5rem);
+
+    color: #532606;
+    padding-bottom: 8px;
+    font-weight: bold;
+    padding-top: 8px;
+}
+
+.conteudoresenha {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    display: block;
+    font-size: clamp(0.4rem, 2vw, 1.2rem);
+
+    border-radius: 16px;
+    background-color: #461e04;
+    width: 40%;
+    min-width: 200px;
+    text-align: center;
+    padding: 8px;
+    color: rgb(255, 250, 205);
+    text-decoration: none;
+}
+
+
+.conteudoresenha:hover {
+    background-color: #006600;
+}
+
+.conteudoresenhaend {
+    margin-top: 16px;
+
+    display: block;
+    font-size: clamp(0.4rem, 2vw, 1.2rem);
+
+    border-radius: 16px;
+    background-color: #461e04;
+    width: 40%;
+    min-width: 200px;
+    text-align: center;
+    padding: 8px;
+    color: rgb(255, 250, 205);
+    text-decoration: none;
+    margin-bottom: 68px;
+}
+
+.conteudoresenhaend:hover {
+    background-color: #006600;
+}
+
+#conteudo-principal h3 {
+    font-size: clamp(0.6rem, 2.5vw, 1.3rem);
+
+    padding: 8px 0px;
+    color: #532606;
+}
+
+#conteudo-principal p {
+    font-size: clamp(0.4rem, 2.5vw, 1.1rem);
+
+    color: #532606;
+    text-align: justify;
+
+}
+
+#conteudo-principal a {}
+
+.linkresenha {
+    color: #532606;
+}
+
+#conteudo-secundario {
+    float: left;
+    width: 40%;
+    padding-left: 24px;
+    padding-right: 24px;
+    position: relative;
+    left: 85%;
+    border-color: #532606;
+    border-left: 1px solid;
+
+}
+
+#conteudo-secundario h3 {
+
+    font-size: clamp(1.2rem, 2.5vw, 2.5rem);
+
+    font-weight: bold;
+    padding: 8px 0px;
+    color: #532606;
+}
+
+#conteudo-secundario li {
+    list-style: none;
+    margin: 8px 0px;
+}
+
+#conteudo-secundario li a {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    color: #925327;
+    font-size: clamp(0.2rem, 1.5vw, 1rem);
+
+}
+
+.conteudo-secundario-noticias {
+    display: flex;
+    gap: 8px;
+    /*espaçamento entre os itens de um display flex */
+
+}
+
+.conteudo-secundario-noticias img {
+    width: 30%;
+    height: 15%;
+    min-height: 25px;
+    min-width: 50px;
+
+}
+
+.container-secundario-lançamentos {
+    padding: 2px 0px;
+}
+
+.container-secundario-lançamentos h4 {
+    font-size: 2rem;
+    color: var(--color-marrom);
+}
+
+.container-secundario-lançamentos h5 {
+    font-size: 1.5rem;
+    color: #532606;
+}
+
+.linklacamentos {
+    text-decoration: underline;
+    color: #461e04;
+}
+
+.conteudo-secundario-noticias img {
+    border-radius: 8px;
+}
+
+.conteudolancamentos {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    display: block;
+    font-size: clamp(0.3rem, 2vw, 1.2rem);
+    border-radius: 16px;
+    background-color: #461e04;
+    width: 60%;
+    text-align: center;
+    padding: 8px;
+    min-width: 200px;
+    color: rgb(255, 250, 205);
+    text-decoration: none;
+}
+
+
+.conteudolancamentos:hover {
+    background-color: #006600;
+}
+
+#navegacaoconteudo {
+    width: 20%;
+    float: left;
+    margin-top: 24px;
+    margin-left: 12px;
+    position: fixed;
+    min-width: 400px;
+    max-width: 400px;
+    overflow: hidden;
+    background: rgb(254, 254, 241);
+    font-size: clamp(0.3rem, 2vw, 2rem);
+    font-weight: bold;
+}
+
+.conteudo-secundario-lista-de-leitura h4 {
+    font-size: 2rem;
+    color: var(--color-marrom);
+}
+
+.conteudo-secundario-lista-de-leitura li a {
+    list-style: none;
+}
+
+#navegacaoconteudo li :hover {
+    text-decoration: underline;
+}
+
+#navegacaoconteudo li {
+    list-style: none;
+    padding: 8px;
+    font-size: clamp(0.3rem, 1.5vw, 1.5rem);
+}
+
+#navegacaoconteudo li a {
+    text-decoration: none;
+    list-style: none;
+    color: #864313;
+
+
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    padding: 8px 12px;
+}
+
+.dropdown-content li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    text-decoration: none;
+}
+
+.bottomhome {
+
+    width: 100%;
+    background-color: #341703;
+    /* Verde sólido */
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    /* Espaço interno para o rodapé */
+    position: fixed;
+    /* Fixar o rodapé no fundo da página */
+    bottom: 0;
+    /* Garantir que fique no final da página */
+    left: 0;
+    /* Estabelece que vai ocupar a largura toda */
+    z-index: 1000;
+    /* Garante que o rodapé fique acima de outros conteúdos */
+
+
+}
+
+.conteudocontainerpagresenha {
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colunas de tamanho igual */
+    gap: 20px;
+    /* Espaço entre os cards */
+    justify-content: center;
+    width: 80%;
+    padding: 24px;
+    position: absolute;
+    left: 15%;
+    margin-top: 64px;
+
+}
+
+.containerconteudoresenha {
+    display: flex;
+    justify-content: center;
+
+}
+
+.cardresenha {
+
+    width: 100%;
+    /* Faz os cards ocuparem o espaço da grid */
+    max-width: 250px;
+    /* Limita a largura do card */
+    height: 100%;
+    border-radius: 16px;
+    text-align: left;
+    padding-bottom: 16px;
+    margin-top: 16px;
+
+}
+
+.cardresenha h4 {
+    font-size: clamp(0.3rem, 1.5vw, 1.4rem);
+    color: #341703;
+    padding: 8px 0px;
+
+}
+
+.cardresenha i {
+    font-size: 1.2rem;
+
+}
+
+.cardresenha img {
+    border-radius: 16px;
+    width: 100%;
+
+}
+
+.cardresenha img:hover {
+    cursor: pointer;
+    border: 4px solid #0d450d;
+
+}
+
+.cardresenha a {
+
+    text-decoration: none;
+    color: #341703;
+    font-size: clamp(0.3rem, 1.5vw, 1rem);
+    font-weight: bold;
+
+
+}
+
+.cardresenha a:hover {
+    text-decoration: underline;
+    color: #006600;
+}
+
+.navegacaopagresenha {
+    position: fixed;
+    top: 100px;
+    left: 15%;
+    /* Estabelece que vai ocupar a largura toda */
+    z-index: 1001;
+    /* Garante que o rodapé fique acima de outros conteúdos */
+    width: 100%;
+    text-align: center;
+    background-color: rgb(254, 254, 241);
+    margin-left: 6px;
+
+
+}
+
+.navegacaopagresenha li {
+    list-style: none;
+    float: left;
+    padding: 32px 32px;
+
+
+
+}
+
+.generoresenha {
+    text-decoration: none;
+    font-size: clamp(0.3rem, 2vw, 2rem);
+    font-weight: 400;
+    color: #210e01;
+    border: 2px solid #210e01;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.generoresenha:hover {
+    border: 2px solid #006600;
+    padding: 8px 16px;
+    color: #006600;
+    font-weight: bold;
+}
+
+.generoresenha:active {
+    background-color: rgb(219, 215, 215);
+    border-radius: 8px;
+}
+
+.generoresenhaativo {
+    background-color: rgb(212, 240, 213);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: clamp(0.3rem, 2vw, 2rem);
+    font-weight: bold;
+    color: #210e01;
+    padding: 8px 16px;
+}
+
+#conteudorpagindicaçoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px;
+    margin: 0 auto;
+    left: 15%;
+    position: absolute;
+    width: 80%;
+}
+
+.containerconteudopi {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.cardindicacao {
+    display: flex;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    background-color: #f2faf2;
+    border: 1px solid #864313;
+    max-width: 500px;
+}
+
+.cardindicacao:hover {
+    transform: translateY(-5px);
+}
+
+.cardindicacao img {
+
+    border-radius: 12px;
+    width: 35%;
+    object-fit: cover;
+    height: 100%;
+
+
+}
+
+.cardindicacao .text-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.cardindicacao .title {
+    font-size: clamp(0.3rem, 1.5vw, 1.2rem);
+    font-weight: bold;
+    color: #461e04;
+    margin-bottom: 8px;
+}
+
+.cardindicacao .subtitle {
+    font-size: clamp(0.3rem, 1.5vw, 0.8rem);
+    color: #006600;
+    font-weight: bold;
+
+}
+
+.cardindicacao .desc {
+    font-size: (0.2rem, 1.5vw, 1rem);
+    color: #461e04;
+    text-align: justify;
+    margin-bottom: 8px;
+}
+
+.containerconteudolis {
+    padding: 16px 0;
+    margin: 0 auto;
+    left: 15%;
+    position: absolute;
+    width: 80%;
+
+}
+
+.cabecalholist {
+    display: flex;
+    justify-content: center;
+    font-size: clamp(0.6rem, 2.5vw, 3.5rem);
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #064701;
+    border-radius: 12px;
+    padding: 16px 6px;
+    border: 1px solid rgb(254, 254, 241);
+
+
+
+}
+
+.containerlivroslist {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    width: 100%;
+    position: absolute;
+
+    padding-bottom: 36px;
+    padding-top: 16px;
+
+}
+
+.livroslist {
+    display: flex;
+    justify-content: center;
+}
+
+.cardlist {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: clamp(0.6rem, 1.5vw, 2rem);
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #155b15;
+
+    padding: 12px 6px;
+
+    border-bottom: 2px solid #bc9f8a;
+    width: 100%;
+    margin: 8px 0px;
+}
+
+.cardlist img {
+    width: 5%;
+    margin: 0px 12px;
+    border-radius: 42px;
+}
+
+.conteudorpagnoticias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 12px 32px;
+    gap: 12px;
+    position: absolute;
+    width: 80%;
+    left: 15%;
+
+}
+
+.containerconteudopn {
+    display: flex;
+    justify-content: center;
+
+}
+
+.cardnoticias {
+    display: flex;
+    max-width: 400px;
+    border: 1px solid #f4e9e1;
+    flex-direction: column;
+    background-color: #dbe8d3;
+    padding: 0 0 0 16px;
+    border-radius: 12px;
+}
+
+.cardnoticias img {
+    border-radius: 12px;
+    width: 90%;
+    height: 40%;
+    align-items: center;
+}
+
+.cardnoticias .text-content {
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.cardnoticias .text {
+    font-size: clamp(0.6rem, 1.5vw, 2.5rem);
+    font-weight: bold;
+    color: #5e2e0c;
+    padding: 12px 0 24px 0;
+    width: 95%;
+}
+
+.cardnoticias .autor {
+    font-size: clamp(0.6rem, 1.5vw, 0.9rem);
+    font-weight: 200;
+    color: #492308;
+    padding: 0 0 8px 0;
+}
+
+.cardnoticias .linknoticia {
+    padding: 24px 0 0 0;
+    display: flex;
+    justify-content: left;
+}
+
+.cardnoticias a {
+    text-decoration: none;
+    color: #eff4ef;
+    font-size: clamp(0.6rem, 1.5vw, 1rem);
+    border-radius: 12px;
+    padding: 6px 8px;
+    background-color: #065810;
+    font-weight: 500;
+
+}
+
+.cardnoticias a:hover {
+    color: #f1f1f1;
+    background-color: #0a4b0a;
+
+}
+
+.conteudocontainerlidos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colunas de tamanho igual */
+    gap: 20px;
+    /* Espaço entre os cards */
+    justify-content: center;
+    width: 80%;
+    padding: 24px;
+    position: absolute;
+    left: 15%;
+    margin-top: 64px;
+
+}
+
+.containerconteudoresenha {
+    display: flex;
+    justify-content: center;
+
+}
+
+.navegacaopaglidos {
+    position: fixed;
+    top: 100px;
+    left: 15%;
+    /* Estabelece que vai ocupar a largura toda */
+    z-index: 1001;
+    /* Garante que o rodapé fique acima de outros conteúdos */
+    width: 100%;
+    text-align: center;
+    background-color: rgb(254, 254, 241);
+    margin-left: 6px;
+}
+
+.navegacaopaglidos li {
+    list-style: none;
+    float: left;
+    padding: 32px 32px;
+
+}
+
+.lidosli {
+    text-decoration: none;
+    font-size: clamp(0.3rem, 2vw, 1.5rem);
+    font-weight: 400;
+    color: #210e01;
+    border: 2px solid #210e01;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.lidosli:hover {
+    border: 2px solid #006600;
+    padding: 8px 16px;
+    color: #006600;
+    font-weight: bold;
+}
+
+.lidosli:active {
+    background-color: rgb(219, 215, 215);
+    border-radius: 8px;
+}
+
+.lidosliativo {
+    background-color: rgb(212, 240, 213);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: clamp(0.3rem, 2vw, 1.5rem);
+    font-weight: bold;
+    color: #210e01;
+    padding: 8px 16px;
+}
+
+#conteudo-principal-sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    left: 15%;
+    border-left: 1px solid #532606;
+}
+
+.sobre-container {
+    display: flex;
+    /*align-items: center;*/
+    gap: 40px;
+    max-width: 1000px;
+}
+
+.sobre-img img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: bold;
+    color: #461e04;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #210e01;
+    text-align: justify;
+}
+redes-sociais {
+    display: flex;
+    gap: 20px;
+}
+
+.redes-sociais a {
+    font-size: 2rem;
+    color: #461e04;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: #064701; /* muda a cor ao passar o mouse */
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #conteudo-principal-sobre {
+        left: 0;
+        width: 100%;
+        border-left: none;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-img img {
+        width: 80%;
+    }
+
+    .redes-sociais {
+        justify-content: center;
+    }
+}
+
+#conteudo-principal-contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    left: 15%;
+    border-left: 1px solid #532606;
+ 
+}
+
+.contato-container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contato-texto h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: bold;
+    color: #461e04;
+    margin-bottom: 15px;
+}
+
+.contato-texto p {
+    font-size: 1.1rem;
+    color: #210e01;
+    margin-bottom: 30px;
+}
+
+/* Informações */
+.contato-info {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #210e01;
+}
+
+.contato-info p {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Ícones sociais */
+.redes-sociais {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redes-sociais a {
+    font-size: 1.8rem;
+    color: #461e04;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: #8b4513;
+    transform: scale(1.1);
+}
+
+/* Formulário */
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #8b5a2b;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #461e04;
+}
+
+/* Botão */
+.contato-form button {
+    background-color: #461e04;
+    color: #fff;
+    padding: 14px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contato-form button:hover {
+    background-color: #006600;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #conteudo-principal-contato {
+        left: 0;
+        width: 100%;
+        border-left: none;
+    }
+
+    .contato-info p {
+        justify-content: flex-start;
+    }
+}
